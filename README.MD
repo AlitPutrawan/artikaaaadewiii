@@ -1,11 +1,11 @@
-# 🍃 Bijak Sampah - Website Edukasi Pengelolaan Sampah
+#  Bijak Sampah - Website Edukasi Pengelolaan Sampah
 
 > **Proyek Ujian Tengah Semester (UTS) Pemrograman Web**  
 > Website Edukasi Masyarakat Bertema SDGs (SDG 11 & SDG 12)
 
 ---
 
-## 👥 Anggota Kelompok & Pembagian Tugas
+##  Anggota Kelompok & Pembagian Tugas
 
 | No | Nama Anggota | NIM | Pembagian Tugas / Kontribusi |
 | :---: | :--- | :---: | :--- |
@@ -17,7 +17,7 @@
 
 ---
 
-## 📌 Deskripsi Website
+## Deskripsi Website
 
 - **Tema Utama SDGs**: `SDG 11` (Kota dan Komunitas yang Berkelanjutan) dan `SDG 12` (Konsumsi dan Produksi yang Bertanggung Jawab).
 - **Sasaran Pengguna**: Masyarakat umum, khususnya skala rumah tangga, pelajar, dan komunitas peduli lingkungan.
@@ -26,7 +26,7 @@
 
 ---
 
-## 📑 Halaman Website
+## Halaman Website
 
 Website **Bijak Sampah** dirancang secara responsif dengan menyajikan 6 bagian utama yang terinterkoneksi secara mulus melalui navigasi *smooth scrolling*:
 
@@ -39,7 +39,7 @@ Website **Bijak Sampah** dirancang secara responsif dengan menyajikan 6 bagian u
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 - **HTML5**: Menggunakan tag semantik modern (`<header>`, `<nav>`, `<section>`, `<article>`, `<main>`, `<footer>`).
 - **CSS3**: Menggunakan *CSS Custom Properties*, *Flexbox*, *CSS Grid*, dan *Media Queries*.
@@ -49,7 +49,7 @@ Website **Bijak Sampah** dirancang secara responsif dengan menyajikan 6 bagian u
 
 ---
 
-## 🔍 Penjelasan Implementasi
+## Penjelasan Implementasi
 
 ### 1. Navigasi
 
@@ -165,3 +165,146 @@ Bagian Edukasi (`#halaman2`) menampilkan 4 foto kategori sampah (Organik, Anorga
 
 ## 5. Layout Kartu Solusi
 Kartu pada bagian Solusi (`#halaman4` ) menggunakan Flexbox untuk menata teks dan gambar agar berjejer secara rapi dalam satu baris.
+```CSS
+.solusi1, .solusi2, .solusi3, .solusi4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  gap: 20px;
+  height: 250px;
+  padding: 20px;
+}
+```
+##FUNGSI:##
+- `display: flex` merapikan teks deskripsi dan gambar agar berjejer secara horizontal dalam satu kartu.
+- `flex: 1` membagi lebar setiap kartu secara merata di dalam kontainer utama.
+- `align-items: center` memposisikan teks dan gambar secara presisi di tengah secara vertikal.
+
+
+##6. Adaptasi Layar Mobile 
+Aturan `@media query` digunakan untuk menyesuaikan tampilan halaman ketika dibuka dari layar smartphone ($\le 768\text{px}$).
+```CSS
+@media screen and (max-width: 768px) {
+  .materi1 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .hamburger {
+    display: flex;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--backrgound);
+    flex-direction: column;
+    z-index: 99999;
+  }
+}
+```
+##FUNGSI:##
+- `@media screen and (max-width: 768px)` mendeteksi jika lebar layar browser berada pada ukuran smartphone.
+
+- `grid-template-columns: 1fr` mengubah tampilan 4 kolom desktop menjadi 1 kolom vertikal agar teks nyaman dibaca tanpa horizontal scroll.
+
+- `.nav-menu.active` mengubah menu navigasi menjadi layar penuh (fullscreen overlay) saat tombol hamburger diklik.
+
+
+##7. Interaktivitas Menu Mobile
+```JavaScript 
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const navMenu = document.getElementById("nav-menu");
+  const closeBtn = document.querySelector("#icon i");
+  const menuLinks = document.querySelectorAll("#menu a");
+
+  if (hamburgerBtn && navMenu) {
+    hamburgerBtn.addEventListener("click", () => {
+      navMenu.classList.add("active");
+    });
+  }
+
+  if (closeBtn && navMenu) {
+    closeBtn.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  }
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+});
+```
+##FUNGSI:##
+- `DOMContentLoaded` memastikan skrip dieksekusi setelah seluruh dokumen HTML selesai dimuat.
+- `classList.add("active")` memunculkan menu navigasi layar penuh saat ikon hamburger diklik.
+- `classList.remove("active")` menyembunyikan menu kembali saat ikon 'X' atau salah satu tautan menu diklik.
+
+## STRUKTUR FOLDER PROYEK
+bijak-sampah/
+├── index.html              # Halaman utama aplikasi (berisi 6 section semantik)
+├── style.css               # File CSS utama (layouting, variabel, media queries)
+├── script.js              # Script pendukung interaktivitas navigasi mobile
+├── README.md               # Dokumentasi lengkap proyek UTS
+└── Photos/                 # Direktori penyimpan aset gambar & ilustrasi
+    ├── Logo Sampah.png     # Logo utama pada navbar
+    ├── sampah.jpg          # Foto latar belakang Hero Section (Section 1)
+    ├── organik.jpg         # Gambar kategori sampah organik
+    ├── anorganik.jpg       # Gambar kategori sampah anorganik
+    ├── sampah b3.jpg       # Gambar kategori sampah B3
+    ├── residu.jpeg         # Gambar kategori sampah residu
+    ├── banjir.jpg          # Visual dampak banjir 1
+    ├── banjir2.jpg         # Visual dampak banjir 2
+    ├── Covid.jpg           # Visual dampak sarang penyakit
+    ├── pencemaran tanah.jpg# Visual dampak pencemaran tanah
+    ├── pencemaran air.jpg  # Visual dampak kerusakan ekosistem
+    ├── LINK pot.png        # Thumbnail tutorial daur ulang pot
+    ├── Link YT citato.jpeg # Thumbnail tutorial kotak pensil
+    ├── kompos.jpg          # Gambar solusi pengomposan
+    ├── daur ulang.jpg      # Gambar solusi 3R & upcycling
+    ├── kumpulan b3.jpg     # Gambar penanganan sampah B3
+    ├── kumpulan residu.jpg # Gambar penanganan sampah residu
+    ├── Alur.jpg.jpeg       # Infografis alur pengelolaan sampah
+    ├── TPS3RR.jpg.jpeg     # Foto operasional TPS3R
+    └── Gotong Royong.jpg.jpeg # Foto kegiatan gotong royong masyarakat
+
+## ALAMAT WEBSITE REPOSTORY
+
+## REFERENSI KONTEN DAN SUMBER ASET
+KPBU Kementerian Keuangan Republik Indonesia:
+
+Penguatan Pengelolaan Sampah melalui Pendekatan Reduce, Reuse, Recycle (3R) Menuju Indonesia Bersih.
+
+🔗 https://kpbu.kemenkeu.go.id/
+
+- WWF Plastic Smart Cities: Bank Sampah: Konsep dan Peran dalam Pengelolaan Lingkungan. 🔗 https://plasticsmartcities.wwf.id/
+
+- Jurnal Administrasi Publik dan Bisnis (JAPB): Evaluasi Efektivitas Program Pengelolaan Sampah Berbasis Komunitas. 🔗 [suspicious link removed]
+
+- Jurnal Perkotaan Universitas Katolik Indonesia Atma Jaya: Kajian Implementasi Fasilitas TPS3R dalam Penanganan Residu Perkotaan. 🔗 https://ejournal.atmajaya.ac.id/
+
+## REFERENSI ASET MEDIA DAN SOSIAL
+
+
+
+
+
+
+
+
+
+
+
