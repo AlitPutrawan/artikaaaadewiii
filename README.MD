@@ -88,7 +88,8 @@ Navbar memakai tag `<nav>` dan berada di bagian atas header. Tombol *hamburger* 
 
 ### 2. STICKY NAVBAR
 Navbar dikunci di bagian atas halaman menggunakan CSS agar tetap terlihat saat pengguna menggeser (scroll) layar ke bawah.
-```.site-bar {
+```CSS
+.site-bar {
   position: sticky;
   top: 0;
   z-index: 999;
@@ -107,7 +108,8 @@ Navbar dikunci di bagian atas halaman menggunakan CSS agar tetap terlihat saat p
 
 ## 3. Efek Garis Meluncur Saat Menu Di-hove
 Garis indikator di bawah teks menu navigasi dibuat menggunakan pseudo-element CSS `::after` agar memberikan respons visual yang halus saat kursor mengarah ke menu.
-```.site-bar a {
+```CSS
+.site-bar a {
   position: relative;
   text-decoration: none;
   color: var(--text-green);
@@ -140,7 +142,8 @@ Garis indikator di bawah teks menu navigasi dibuat menggunakan pseudo-element CS
 
 ## 4. Layout Galeri Foto Kategori Sampah
 Bagian Edukasi (`#halaman2`) menampilkan 4 foto kategori sampah (Organik, Anorganik, B3, Residu) secara sejajar menggunakan CSS Grid.
-```#image-sampah {
+```CSS
+#image-sampah {
   display: grid;
   place-items: center;
   grid-template-columns: repeat(4, 1fr);
