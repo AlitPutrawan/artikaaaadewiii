@@ -84,3 +84,81 @@ Navbar memakai tag `<nav>` dan berada di bagian atas header. Tombol *hamburger* 
 - `<div class="hamburger" id="hamburger-btn">` berfungsi sebagai tombol pembuka menu saat website dibuka dari layar HP/smartphone.
 
 - `<div id="icon">` berisi ikon silang (fa-xmark) yang digunakan untuk menutup kembali menu mobile yang sedang terbuka.
+
+
+### 2. STICKY NAVBAR
+Navbar dikunci di bagian atas halaman menggunakan CSS agar tetap terlihat saat pengguna menggeser (scroll) layar ke bawah.
+```.site-bar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+```
+##FUNGSI##
+- `position: sticky` dan `top: 0` membuat navbar tetap melayang dan menempel di bagian paling atas layar saat di-scroll.
+
+- `z-index: 999` menjaganya berada di lapisan paling atas agar tidak tertutup oleh elemen gambar atau teks lain.
+
+- `box-shadow` memberikan bayangan lembut di bawah navbar sebagai pemisah visual dengan konten halaman.
+
+
+## 3. Efek Garis Meluncur Saat Menu Di-hove
+Garis indikator di bawah teks menu navigasi dibuat menggunakan pseudo-element CSS `::after` agar memberikan respons visual yang halus saat kursor mengarah ke menu.
+```.site-bar a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-green);
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.site-bar a::after {
+  content: "";    
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--backrgound);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.site-bar a:hover::after {
+  transform: scaleX(1);
+}
+```
+##FUNGSI##
+- `position: relative` dipasang pada tag `<a>` sebagai acuan posisi elemen garis.
+- Garis dibuat dari pseudo-element `::after` yang awalnya berukuran nol ( `scaleX(0)` ).
+-Saat di-hover, garis membesar meluncur dari kiri ke kanan ( `scaleX(1)` ). `transition` membuat gerakannya halus.
+
+
+## 4. Layout Galeri Foto Kategori Sampah
+Bagian Edukasi (`#halaman2`) menampilkan 4 foto kategori sampah (Organik, Anorganik, B3, Residu) secara sejajar menggunakan CSS Grid.
+```#image-sampah {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
+  column-gap: 15px;
+}
+
+#image-sampah img {
+  width: 390px;
+  height: 250px;
+  object-fit: cover;
+}
+```
+##FUNGSI:##
+- `display: grid` membagi kontainer foto menjadi grid dua dimensi.
+- `grid-template-columns: repeat(4, 1fr)` membagi area secara otomatis menjadi 4 kolom sejajar berukuran sama.
+- `object-fit: cover` memastikan gambar terpotong rapi menyesuaikan ukuran tanpa merusak aspek rasio atau membuat gambar gepeng.
+
+
+## 5. Layout Kartu Solusi
+Kartu pada bagian Solusi (`#halaman4` ) menggunakan Flexbox untuk menata teks dan gambar agar berjejer secara rapi dalam satu baris.
