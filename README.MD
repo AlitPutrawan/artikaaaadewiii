@@ -75,7 +75,10 @@ Navbar memakai tag <nav> dan berada di bagian atas header. Tombol hamburger disi
   </nav>
 </header>
 ```
-*FUNGSI*
-1. Setiap <a href="#halamanX"> memindahkan pengunjung langsung ke bagian section tertentu pada halaman tanpa perlu reload, memanfaatkan smooth scroll.  
-2. Tag <div class="hamburger" id="hamburger-btn"> berfungsi sebagai tombol pembuka menu saat website dibuka dari layar HP/smartphone.   
-3. Tag <div id="icon"> berisi ikon silang (fa-xmark) yang digunakan untuk menutup kembali menu mobile yang sedang terbuka.   
+
+##FUNGSI##
+-Setiap <a href="#halamanX"> memindahkan pengunjung langsung ke bagian section tertentu tanpa perlu reload, memanfaatkan smooth scroll.
+
+-<div class="hamburger" id="hamburger-btn"> berfungsi sebagai tombol pembuka menu saat website dibuka dari layar HP/smartphone.
+
+-<div id="icon"> berisi ikon silang (fa-xmark) yang digunakan untuk menutup kembali menu mobile yang sedang terbuka.
