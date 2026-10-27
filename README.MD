@@ -53,7 +53,7 @@ Website **Bijak Sampah** dirancang secara responsif dengan menyajikan 6 bagian u
 
 ## 1. NAVIGASI YANG DIGUNAKAN 
 Navbar memakai tag <nav> dan berada di bagian atas header. Tombol hamburger disiapkan untuk tampilan mobile, dan navigasi berpindah section menggunakan anchor link (#halamanX)
-<header class="site-bar">
+```<header class="site-bar">
   <nav class="nav-bar">
     <img src="Photos/Logo Sampah.png" alt="logo" class="logo" />
     <div class="hamburger" id="hamburger-btn">
