@@ -50,3 +50,31 @@ Website **Bijak Sampah** dirancang secara responsif dengan menyajikan 6 bagian u
 * **JavaScript (Vanilla JS)**: Mengontrol interaktivitas menu navigasi *hamburger* pada perangkat *mobile* (layar kecil).
 
 ---
+
+## 1. NAVIGASI YANG DIGUNAKAN 
+Navbar memakai tag <nav> dan berada di bagian atas header. Tombol hamburger disiapkan untuk tampilan mobile, dan navigasi berpindah section menggunakan anchor link (#halamanX)
+<header class="site-bar">
+  <nav class="nav-bar">
+    <img src="Photos/Logo Sampah.png" alt="logo" class="logo" />
+    <div class="hamburger" id="hamburger-btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <div id="icon">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div id="menu">
+        <a href="#halaman1" class="brand">Beranda</a>
+        <a href="#halaman2">Edukasi</a>
+        <a href="#halaman3">Dampak</a>
+        <a href="#halaman4">Solusi</a>
+        <a href="#halaman5">Artikel</a>
+        <a href="#halaman6">Tentang</a>
+      </div>
+    </div>
+  </nav>
+</header>
+## FUNGSI 
+1. Setiap <a href="#halamanX"> memindahkan pengunjung langsung ke bagian section tertentu pada halaman tanpa perlu reload, memanfaatkan smooth scroll.  
+2. Tag <div class="hamburger" id="hamburger-btn"> berfungsi sebagai tombol pembuka menu saat website dibuka dari layar HP/smartphone.   
+3. Tag <div id="icon"> berisi ikon silang (fa-xmark) yang digunakan untuk menutup kembali menu mobile yang sedang terbuka.   
