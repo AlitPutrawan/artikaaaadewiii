@@ -1,7 +1,7 @@
-# 🍃 Bijak Sampah - Pengelolaan Sampah Rumah Tangga
+# 🍃 Bijak Sampah - Website Edukasi Pengelolaan Sampah
 
-> **Website Edukasi Pengelolaan Sampah Rumah Tangga Bertema SDGs (SDG 11 & SDG 12)**  
-> Proyek Ujian Tengah Semester (UTS) Mata Kuliah Pemrograman Web
+> **Proyek Ujian Tengah Semester (UTS) Pemrograman Web**  
+> Website Edukasi Masyarakat Bertema SDGs (SDG 11 & SDG 12)
 
 ---
 
@@ -19,41 +19,44 @@
 
 ## 📌 Deskripsi Website
 
-* **Tema Utama SDGs**:
-  * **SDG 11**: *Sustainable Cities and Communities* (Kota dan Komunitas yang Berkelanjutan)[cite: 2].
-  * **SDG 12**: *Responsible Consumption and Production* (Konsumsi dan Produksi yang Bertanggung Jawab)[cite: 2].
-* **Sasaran Pengguna**: Masyarakat umum, khususnya skala rumah tangga, pelajar, dan komunitas peduli lingkungan.
-* **Tujuan**: Tujuan utama dari pembuatan sistem ini adalah mengintegrasikan seluruh proses bisnis ke dalam satu platform sentral melalui sembilan modul fungsional. Untuk mendukung pengambilan keputusan yang strategis, aplikasi ini menyediakan dasbor eksekutif interaktif yang menampilkan Key Performance Indicators (KPI), tren okupansi, dan peringatan otomatis secara seketika.
-* **Manfaat**: Membantu mengurangi volume sampah yang bermuara di Tempat Pemrosesan Akhir (TPA), mencegah banjir, serta mengurangi pencemaran tanah dan air akibat limbah berbahaya.
+- **Tema Utama SDGs**: `SDG 11` (Kota dan Komunitas yang Berkelanjutan) dan `SDG 12` (Konsumsi dan Produksi yang Bertanggung Jawab).
+- **Sasaran Pengguna**: Masyarakat umum, khususnya skala rumah tangga, pelajar, dan komunitas peduli lingkungan.
+- **Tujuan**: Meningkatkan kesadaran masyarakat untuk memilah sampah dari rumah, mengurangi penggunaan limbah plastik sekali pakai, mengolah sampah organik secara mandiri, serta memberikan pemahaman mengenai fasilitas pengolahan sampah seperti TPS3R dan Bank Sampah.
+- **Manfaat**: Membantu mengurangi volume sampah yang bermuara di Tempat Pemrosesan Akhir (TPA), mencegah banjir, serta mengurangi pencemaran tanah dan air akibat limbah berbahaya.
 
 ---
 
-## 📑 Struktur Bagian / Halaman Website
+## 📑 Halaman Website
 
 Website **Bijak Sampah** dirancang secara responsif dengan menyajikan 6 bagian utama yang terinterkoneksi secara mulus melalui navigasi *smooth scrolling*:
 
-1. **Beranda (`#halaman1`)**: Menampilkan *Hero Section* dengan latar belakang visual menarik, judul utama, slogan, dan pengantar pesan pentingnya mengelola sampah demi bumi.
-2. **Edukasi (`#halaman2`)**: Menjelaskan 4 kategori utama sampah rumah tangga (Organik, Anorganik, B3, dan Residu) lengkap dengan deskripsi, contoh material, rentang waktu terurai secara alami, serta visual pendukung.
-3. **Dampak (`#halaman3`)**: Menggambarkan bahaya nyata jika sampah tidak dikelola dengan baik, seperti timbulnya banjir, sarang penyakit (DBD, diare), pencemaran tanah, dan kerusakan ekosistem laut akibat mikroplastik[cite: 3].
-4. **Solusi (`#halaman4`)**: Menyediakan panduan praktis pengelolaan mandiri melalui metode Komposting (Organik), 3R & Upcycling (Anorganik), penanganan khusus limbah B3, pengolahan residu, serta tautan tutorial daur ulang kreatif berbentuk video[cite: 3].
-5. **Artikel (`#halaman5`)**: Mengedukasi masyarakat tentang peran komunitas, alur pengelolaan sampah dari rumah tangga, pengertian fasilitas pengolahan **TPS3R**, dan nilai luhur **Gotong Royong**[cite: 3].
-6. **Tentang (`#halaman6`)**: Menyajikan latar belakang tujuan pengembangan platform, profil anggota kelompok pengembang, serta rujukan/referensi ilmiah dan kredibel[cite: 3].
+1. **Beranda (`#halaman1`)**: Menampilkan *Hero Section* dengan latar belakang visual menarik, judul utama, slogan, dan pengantar pesan pengelolaan sampah.
+2. **Edukasi (`#halaman2`)**: Menjelaskan 4 kategori utama sampah rumah tangga (Organik, Anorganik, B3, dan Residu) beserta deskripsi, contoh, dan estimasi waktu terurai.
+3. **Dampak (`#halaman3`)**: Menggambarkan bahaya nyata jika sampah tidak dikelola, seperti banjir, sarang penyakit, pencemaran tanah, dan kerusakan ekosistem laut.
+4. **Solusi (`#halaman4`)**: Menyediakan panduan praktis pengelolaan mandiri melalui metode Komposting, 3R & Upcycling, penanganan B3, residu, dan link tutorial daur ulang.
+5. **Artikel (`#halaman5`)**: Mengedukasi masyarakat tentang alur pengolahan sampah, peran fasilitas **TPS3R**, dan nilai luhur **Gotong Royong**.
+6. **Tentang (`#halaman6`)**: Menyajikan latar belakang tujuan platform, profil anggota kelompok pengembang, serta daftar rujukan ilmiah.
 
 ---
 
 ## 🛠️ Teknologi yang Digunakan
 
-* **HTML5**: Menggunakan tag semantik modern (`<header>`, `<nav>`, `<section>`, `<article>`, `<main>`, `<footer>`)[cite: 3].
-* **CSS3**: Menggunakan *CSS Custom Properties* (Variables), *Flexbox*, *CSS Grid*, dan *Media Queries*[cite: 3].
-* **FontAwesome (v6.7.2)**: Penyedia ikon vektor responsif untuk memperjelas visual antarmuka pengguna (UI).
-* **Google Fonts**: Menggunakan *font family* `'Poppins'` untuk keterbacaan tipografi yang optimal.
-* **JavaScript (Vanilla JS)**: Mengontrol interaktivitas menu navigasi *hamburger* pada perangkat *mobile* (layar kecil).
+- **HTML5**: Menggunakan tag semantik modern (`<header>`, `<nav>`, `<section>`, `<article>`, `<main>`, `<footer>`).
+- **CSS3**: Menggunakan *CSS Custom Properties*, *Flexbox*, *CSS Grid*, dan *Media Queries*.
+- **FontAwesome (v6.7.2)**: Penyedia ikon vektor responsif untuk antarmuka pengguna (UI).
+- **Google Fonts**: Menggunakan *font family* `'Poppins'` untuk keterbacaan tipografi.
+- **JavaScript (Vanilla JS)**: Mengontrol interaktivitas menu navigasi *hamburger* pada perangkat *mobile*.
 
 ---
 
-## 1. NAVIGASI YANG DIGUNAKAN 
-Navbar memakai tag <nav> dan berada di bagian atas header. Tombol hamburger disiapkan untuk tampilan mobile, dan navigasi berpindah section menggunakan anchor link (#halamanX)
-```<header class="site-bar">
+## 🔍 Penjelasan Implementasi
+
+### 1. Navigasi
+
+Navbar memakai tag `<nav>` dan berada di bagian atas header. Tombol *hamburger* disiapkan untuk tampilan *mobile*, dan navigasi berpindah section menggunakan *anchor link* (`#halamanX`).
+
+```html
+<header class="site-bar">
   <nav class="nav-bar">
     <img src="Photos/Logo Sampah.png" alt="logo" class="logo" />
     <div class="hamburger" id="hamburger-btn">
@@ -74,11 +77,3 @@ Navbar memakai tag <nav> dan berada di bagian atas header. Tombol hamburger disi
     </div>
   </nav>
 </header>
-```
-
-##FUNGSI##
--Setiap <a href="#halamanX"> memindahkan pengunjung langsung ke bagian section tertentu tanpa perlu reload, memanfaatkan smooth scroll.
-
--<div class="hamburger" id="hamburger-btn"> berfungsi sebagai tombol pembuka menu saat website dibuka dari layar HP/smartphone.
-
--<div id="icon"> berisi ikon silang (fa-xmark) yang digunakan untuk menutup kembali menu mobile yang sedang terbuka.
