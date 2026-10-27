@@ -254,6 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
 - `classList.remove("active")` menyembunyikan menu kembali saat ikon 'X' atau salah satu tautan menu diklik.
 
 ## STRUKTUR FOLDER PROYEK
+```
 bijak-sampah/
 ├── index.html              # Halaman utama aplikasi (berisi 6 section semantik)
 ├── style.css               # File CSS utama (layouting, variabel, media queries)
@@ -280,7 +281,7 @@ bijak-sampah/
     ├── Alur.jpg.jpeg       # Infografis alur pengelolaan sampah
     ├── TPS3RR.jpg.jpeg     # Foto operasional TPS3R
     └── Gotong Royong.jpg.jpeg # Foto kegiatan gotong royong masyarakat
-
+```
 ## ALAMAT WEBSITE REPOSTORY
 
 ## REFERENSI KONTEN DAN SUMBER ASET
