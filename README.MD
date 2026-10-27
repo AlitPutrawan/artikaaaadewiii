@@ -23,7 +23,7 @@
   * **SDG 11**: *Sustainable Cities and Communities* (Kota dan Komunitas yang Berkelanjutan)[cite: 2].
   * **SDG 12**: *Responsible Consumption and Production* (Konsumsi dan Produksi yang Bertanggung Jawab)[cite: 2].
 * **Sasaran Pengguna**: Masyarakat umum, khususnya skala rumah tangga, pelajar, dan komunitas peduli lingkungan.
-* **Tujuan**: Meningkatkan kesadaran masyarakat untuk memilah sampah dari rumah, mengurangi penggunaan limbah plastik sekali pakai, mengolah sampah organik secara mandiri, serta memberikan pemahaman mengenai operasional fasilitas pengolahan sampah seperti TPS3R dan Bank Sampah.
+* **Tujuan**: Tujuan utama dari pembuatan sistem ini adalah mengintegrasikan seluruh proses bisnis ke dalam satu platform sentral melalui sembilan modul fungsional. Untuk mendukung pengambilan keputusan yang strategis, aplikasi ini menyediakan dasbor eksekutif interaktif yang menampilkan Key Performance Indicators (KPI), tren okupansi, dan peringatan otomatis secara seketika.
 * **Manfaat**: Membantu mengurangi volume sampah yang bermuara di Tempat Pemrosesan Akhir (TPA), mencegah banjir, serta mengurangi pencemaran tanah dan air akibat limbah berbahaya.
 
 ---
